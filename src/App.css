@@ -1,0 +1,225 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.overall{
+  height: 100vh;
+  width: 100%;
+  /* background-image: linear-gradient(90deg,rgb(246, 183, 183),white,rgb(251, 188, 188),white,rgb(253, 187, 187)); */
+}
+.outbox{
+  height: 90vh;
+  width: 100%;
+  background-image: linear-gradient(45deg,rgb(246, 183, 183),white,rgb(251, 188, 188),white,rgb(253, 187, 187));
+  padding: 15px;
+  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 15px;
+  overflow-y:auto;
+  position: relative;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(139, 4, 4, 0.648) rgb(255, 174, 174);
+}
+.inp{
+  height: 40px;
+  width: 60%;
+  max-width: 290px;
+  /* background-color: blue; */
+  overflow: hidden;
+}
+nav{
+  min-height: 10vh;
+  max-height: 25vh;
+  background-color: rgb(101, 9, 9);
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  
+  text-shadow: 2px 2px 2px rgb(255, 255, 255);
+}
+.navbar{
+height: 100%;
+width: 40%;
+color: rgb(255, 166, 166);
+background-color: rgba(255, 127, 127, 0);
+}
+.navbar:nth-child(2){
+  padding: 5px;
+  width: 60%;
+  justify-content: end;
+ gap: 30px;
+  }
+  .navbar:nth-child(2) input{
+    height: 100%;
+    width: 100%;
+    max-width: 290px;
+    border-radius: 20px;
+    padding: 15px;
+    border: 2px solid red;
+    outline: none;
+    transition: all 0.2s;
+    
+  }
+  .inphid{
+    transform: translateX(300px);
+  }
+ 
+  .navbar:nth-child(2) button{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    border: 2px solid rgb(255, 0, 0);
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    position: relative;
+  }
+
+  /* /////////////////////////////////////////////// */
+
+  .box{
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    position: relative;
+    overflow: hidden;
+    flex-grow: 0.4;
+    /* z-index: -2; */
+  }
+  .box:active{
+    transition: all 0.1s;
+    transform: scale(0.95);
+  }
+  .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    /* z-index: -1; */
+  }
+  .box img:hover{
+    transition: all 0.4s;
+    transform: scale(1.1);
+  }
+  .box>section{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .name{
+    background-color: rgba(0, 0, 0, 0.319);
+    height: 25%;
+    width: 100%;
+    position: relative;
+    z-index: 9;
+    color: white;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box p{
+    align-self: start;
+    background-color: azure;
+    padding: 5px 20px 5px 10px;
+    border-bottom-right-radius:30px ;
+    position: relative;
+    z-index: 9;
+  }
+
+  /* //////////////////////////////////////// */
+  .list{
+    height: 90vh;
+    width: 600px;
+    background-color: rgba(75, 12, 12, 0.903);
+    position: fixed;
+    z-index: 10;
+    top: 70px;
+    right:10px;
+    transition: all 0.6s;
+    padding: 25px;
+    color: white;
+    border: 2px solid white;
+  }
+  .list1{
+    right: -900px;
+  }
+   
+  .list>section{
+    width: 100%;
+    background-color:rgba(59, 11, 11, 0.403) ;
+    scrollbar-width: thin;
+
+  }
+  .list>section:nth-child(2){
+    height: 67%;
+    overflow: auto;
+  }
+  .list>section:nth-child(3){
+    height: 35%;
+    background-color:rgba(59, 11, 11, 0.403) ;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+  flex-wrap: wrap;
+    
+    
+
+  }
+table{
+  width: 100%;
+  /* background-color: rgb(13, 72, 72); */
+}
+td{
+  border: 9px solid rgb(255, 0, 0);
+  padding: 18px 10px;
+  width:25%;
+  text-align: center;
+  
+}
+
+table:nth-child(1) tr td{
+  font-size: 25px;
+  text-shadow: 2px 2px 2px rgb(255, 255, 255);
+  font-weight: bold;
+  color: rgb(238, 79, 79);
+}
+.total{
+  border-top: 4px solid white;
+}
+tr td:nth-child(1){
+  text-align: left;
+}
+table~button{
+  background-color: rgb(228, 153, 153);
+  height: 40px;
+  width: 120px;
+  border-radius: 5px;
+  border: 2px solid white;
+  font-weight: bold;
+
+}
+button>button{
+  width: 23px!important;
+  height: 23px!important;
+  position: absolute!important ;
+  right: -10px;
+  top: -10px;
+  font-size: 13px!important;
+  font-weight: bold;
+  display: none!important;
+}
+.show{
+  display: inline!important;
+}
